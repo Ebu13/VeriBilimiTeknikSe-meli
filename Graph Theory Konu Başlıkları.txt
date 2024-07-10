@@ -1,0 +1,92 @@
+1-Centrality (Merkezilik): Bir ağdaki düğümlerin önemini ölçen metriklerdir.
+- 1.1-Pagerank: Web sayfalarının önemini ölçmek için kullanılan bir merkezilik ölçüsüdür.
+- 1.2-Closeness (Yakınlık): Bir düğümün ağdaki diğer tüm düğümlere olan ortalama uzaklığını ölçer.
+- 1.3-Betweenness (Arasında olma): Bir düğümün ağdaki diğer düğüm çiftleri arasındaki en kısa yollar üzerinde ne sıklıkla yer aldığını ölçer.
+- 1.4-Eigenvector (Özvektör): Bir düğümün merkeziliğini, komşularının merkezilik dereceleriyle birlikte değerlendirir.
+- 1.5-Malatya Centrality: Özel bir merkezilik ölçüsüdür , 
+						 https://dergipark.org.tr/tr/pub/gazimmfd/issue/65733/834255 
+
+2-Community Detection (Topluluk Tespiti): Ağdaki düğümleri benzer veya yoğun bağlantılara sahip gruplara ayırmayı amaçlar.
+- 2.1-Modularity (Modülerlik): Bir ağın topluluk yapısının gücünü ölçer.
+- 2.2-İgraph Topluluk tespiti yöntemleri: İgraph, topluluk tespiti için çeşitli algoritmalar sunan bir ağ analizi kütüphanesidir.
+- 2.3-Optimizasyon: Topluluk tespitinde kullanılan modülerliği maksimize etmeyi amaçlayan yöntemlerdir.
+
+3- Bağımsız Küme (Independent Set): Bu, grafın içindeki bir düğüm kümesidir ve bu kümedeki hiçbir düğüm diğer bir düğümle komşu değildir. 
+Yani, bu kümedeki herhangi iki düğüm arasında doğrudan bir kenar yoktur.
+
+4- Hakim Küme (Dominating Set): Bu, grafın içindeki öyle bir düğüm kümesidir ki, 
+grafın içindeki her düğüm ya bu kümededir ya da bu kümenin en az bir elemanıyla komşudur. 
+Başka bir deyişle, bu küme grafın tüm düğümlerini ya içerir ya da onlara komşudur.
+
+5- Düğüm Kaplama (Vertex Cover): Bu, grafın içindeki öyle bir düğüm kümesidir ki,
+grafın içindeki her kenarın en az bir ucu bu kümededir. 
+Yani, grafın tüm kenarları bu küme tarafından “kaplanmış” olur.
+
+6- Kenar Kaplama (Edge Cover): Bu, grafın içindeki öyle bir kenar kümesidir ki, 
+grafın içindeki her düğüm bu kenar kümesindeki en az bir kenarın ucudur. 
+Yani, her düğüm en az bir kenarla bağlantılıdır.
+
+7- Düğüm Boyama (Vertex Coloring): Bu, grafın düğümlerini boyama işlemidir. 
+Burada amaç, komşu olan her iki düğümün farklı renklerle boyanmasıdır. 
+Böylece, hiçbir komşu düğüm çifti aynı renge sahip olmaz.
+
+8- Kenar Boyama (Edge Coloring): Bu, grafın kenarlarını boyama işlemidir. 
+Burada amaç, komşu olan her iki kenarın farklı renklerle boyanmasıdır. 
+Yani, her kenarın komşu kenarlarından farklı bir renge sahip olması gerekmektedir.
+
+9- Eşleştirme (Matching): Bu, grafın içindeki öyle bir kenar kümesidir ki, 
+bu kümedeki hiçbir iki kenarın ortak ucu yoktur. 
+Yani, bu kümedeki her kenar birbirinden bağımsızdır ve hiçbir düğüm iki kenarın da ucunda yer almaz.
+
+10-Clique (Klik): Bir graf içindeki bir düğüm kümesidir ve bu kümedeki her iki düğüm birbirine komşudur. 
+Yani, bu kümedeki her düğüm diğer tüm düğümlerle doğrudan bir kenarla bağlantılıdır. 
+Bu, kümenin tam bir altgraf olduğu anlamına gelir; çünkü içindeki her düğüm diğer tüm düğümlerle bağlantılıdır
+
+- 10.1-Maximum clique (Maksimum Klik): Bir grafın içindeki en büyük sayıda düğüm içeren klik. 
+Maksimum klik, grafın içinde bulunabilecek en büyük tam altgraftır ve genellikle grafın içindeki en büyük klik sayısını ifade eder.
+Maksimum klik problemi, bir graf içindeki maksimum kliği bulma problemidir ve NP-tam bir problemdir, 
+yani polinom zamanda çözülebilecek bilinen bir algoritması yoktur.
+
+- 10.2-Clique Cover (Klik Kaplama): Bir grafın düğümlerini içeren kliklerin kümesidir. 
+Burada amaç, grafın tüm düğümlerini içeren en az sayıda kliği bulmaktır. 
+Klik kaplama sayısı, bir grafiğin düğümlerini kaplayan minimum klik sayısını ifade eder ve bu da NP-tam bir problemdir.
+
+
+11-Çizgenin özel durumları:
+
+11.1-Hipergraf (Hypergraph): Hipergraf, kenarların iki yerine birden fazla düğümü birleştirebildiği bir graf türüdür. 
+Yani, hipergrafın kenarları, geleneksel graf kenarlarından farklı olarak, iki düğüm yerine bir düğüm kümesini birleştirebilir.
+
+11.2-Düzlemsel Graf (Planar Graph): Düzlemsel graf, kenarlarının hiçbiri birbirini kesmeden çizilebilen graf türüdür. 
+Başka bir deyişle, düzlemsel grafın kenarları bir düzlem üzerinde birbirlerini kesmeden çizilebilir.
+
+11.3-Dual Graf (Dual Graph): Dual graf, bir planar grafin yüzleri ile ilişkilendirilmiş bir graf türüdür. 
+Her yüz, dual grafın bir düğümüne karşılık gelir ve her kenar, orijinal grafin kenarlarına komşu olan yüz çiftleri arasında bir bağlantı oluşturur.
+
+11.4-Tamamlayıcı Graf (Complement Graph): Tamamlayıcı graf, başlangıç grafinin kenarları dışında kalan tüm olası kenarları içeren graf türüdür. 
+Yani, eğer iki düğüm orijinal grafda komşu değilse, tamamlayıcı grafda komşudurlar.
+
+11.5-Tam Graf (Complete Graph): Tam graf, her düğümün diğer tüm düğümlere komşu olduğu graf türüdür. 
+Yani, tam grafın her düğüm çifti arasında bir kenar bulunur.
+
+11.7-İkili Graf (Bipartite Graph): İkili graf, düğümlerin iki ayrı ve birbirinden bağımsız gruba ayrıldığı 
+ve her kenarın bu iki farklı gruptaki düğümleri birleştirdiği graf türüdür.
+
+11.8-Çoklu Graf (Multipartite Graph): Çoklu graf, düğümlerin birden fazla bağımsız gruba ayrılabildiği 
+ve her kenarın farklı gruplardaki düğümleri birleştirdiği, ikili grafın genelleştirilmiş halidir.
+
+12-Gezgin satıcı problemi: En kısa yolu bularak tüm düğümleri ziyaret etmeyi amaçlayan bir optimizasyon problemidir.
+
+13- Voronoi Diyagramı ve Delaunay Üçgenlemesi: Voronoi diyagramı, bir düzlemi belirli bir nokta kümesine en yakın olan bölgelere ayıran bir bölümlemesidir. 
+Her nokta için, o noktaya diğer noktalardan daha yakın olan düzlemdeki tüm noktaları içeren bir Voronoi hücresi vardır. 
+Delaunay üçgenlemesi ise, bir nokta kümesinin üçgenleştirilmesiyle oluşturulan bir yapıdır ve her üçgenin çevrel çemberi içinde başka bir nokta bulunmaz. 
+Voronoi diyagramı ve Delaunay üçgenlemesi birbirlerinin dualıdır; yani birinin kenarları, diğerinin köşe noktalarına karşılık gelir.
+
+14- Motif Keşfi: Ağ motifleri, belirli bir desen veya yapıyı tekrar eden alt grafiklerdir ve genellikle bir ağın işlevsel özelliklerini yansıtır. 
+Motif keşfi, bu tekrar eden veya istatistiksel olarak önemli alt yapıları bulma işlemidir. 
+Motifler, ağın topolojik yapısını ve bu yapının sıklık ve dağılımını anlamak için kullanılır ve çeşitli algoritmalarla keşfedilir.
+
+15- Maksimum Akış (Maximum Flow): Maksimum akış problemi, bir kaynaktan bir hedefe, 
+kapasite kısıtlamalarına uygun olarak gönderilebilecek maksimum akış miktarını bulmayı amaçlar. 
+Bu problem, Ford-Fulkerson ve Edmonds-Karp gibi algoritmalar kullanılarak çözülebilir ve taşımacılık sistemleri, 
+iletişim ağları ve kaynak tahsisi gibi çeşitli gerçek dünya durumlarını modellemek için kullanılır.
